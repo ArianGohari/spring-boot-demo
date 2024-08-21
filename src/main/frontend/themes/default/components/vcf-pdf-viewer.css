@@ -1,0 +1,7 @@
+[part~="toolbar"] {
+    display: none !important;
+}
+
+[part~="viewer-container"] {
+    height: 100% !important;
+}

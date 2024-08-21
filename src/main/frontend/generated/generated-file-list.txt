@@ -1,0 +1,16 @@
+ChatService.ts
+PaperService.ts
+de/gohari/chat_with_paper/model/ChatMessage.ts
+de/gohari/chat_with_paper/model/Chunk.ts
+de/gohari/chat_with_paper/model/Paper.ts
+org/springframework/web/multipart/MultipartFile.ts
+org/bson/types/ObjectId.ts
+org/springframework/core/io/Resource.ts
+connect-client.default.ts
+endpoints.ts
+de/gohari/chat_with_paper/model/ChatMessageModel.ts
+de/gohari/chat_with_paper/model/ChunkModel.ts
+de/gohari/chat_with_paper/model/PaperModel.ts
+org/springframework/web/multipart/MultipartFileModel.ts
+org/bson/types/ObjectIdModel.ts
+org/springframework/core/io/ResourceModel.ts

@@ -1,0 +1,7 @@
+[part~="drop-label"] {
+    display: none;
+}
+
+vaadin-upload-file-list {
+    display: none;
+}
