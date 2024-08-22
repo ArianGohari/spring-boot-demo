@@ -14,17 +14,17 @@ class ResourceModel<T extends Resource_1 = Resource_1> extends ObjectModel_1<T> 
     get url(): ObjectModel_1 {
         return this[_getPropertyModel_1]("url", (parent, key) => new ObjectModel_1(parent, key, false, { meta: { javaType: "java.net.URL" } }));
     }
-    get uri(): ObjectModel_1 {
-        return this[_getPropertyModel_1]("uri", (parent, key) => new ObjectModel_1(parent, key, false, { meta: { javaType: "java.net.URI" } }));
-    }
-    get description(): StringModel_1 {
-        return this[_getPropertyModel_1]("description", (parent, key) => new StringModel_1(parent, key, false, { meta: { javaType: "java.lang.String" } }));
+    get contentAsByteArray(): ArrayModel_1<NumberModel_1> {
+        return this[_getPropertyModel_1]("contentAsByteArray", (parent, key) => new ArrayModel_1(parent, key, false, (parent, key) => new NumberModel_1(parent, key, false, { meta: { javaType: "byte" } }), { meta: { javaType: "byte[]" } }));
     }
     get filename(): StringModel_1 {
         return this[_getPropertyModel_1]("filename", (parent, key) => new StringModel_1(parent, key, false, { meta: { javaType: "java.lang.String" } }));
     }
-    get contentAsByteArray(): ArrayModel_1<NumberModel_1> {
-        return this[_getPropertyModel_1]("contentAsByteArray", (parent, key) => new ArrayModel_1(parent, key, false, (parent, key) => new NumberModel_1(parent, key, false, { meta: { javaType: "byte" } }), { meta: { javaType: "byte[]" } }));
+    get description(): StringModel_1 {
+        return this[_getPropertyModel_1]("description", (parent, key) => new StringModel_1(parent, key, false, { meta: { javaType: "java.lang.String" } }));
+    }
+    get uri(): ObjectModel_1 {
+        return this[_getPropertyModel_1]("uri", (parent, key) => new ObjectModel_1(parent, key, false, { meta: { javaType: "java.net.URI" } }));
     }
 }
 export default ResourceModel;
