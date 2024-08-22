@@ -1,4 +1,8 @@
 FROM openjdk:22-jdk-slim
-COPY build/libs/*.jar app.jar
+# Set the working directory in the container
+WORKDIR /app
+COPY . .
+RUN chmod +x ./gradlew
+RUN ./gradlew build
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "/app.jar"]
