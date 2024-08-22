@@ -1,6 +1,5 @@
 plugins {
     java
-    war
     id("org.springframework.boot") version "3.3.2"
     id("io.spring.dependency-management") version "1.1.6"
     id("com.vaadin") version "24.4.7"
@@ -13,6 +12,14 @@ java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(22)
     }
+}
+
+vaadin {
+    productionMode = true
+}
+
+tasks.getByName<Jar>("jar") {
+    enabled = false
 }
 
 configurations {
@@ -42,7 +49,6 @@ dependencies {
     implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter")
     implementation("org.apache.pdfbox:pdfbox:3.0.2")
     implementation("org.springframework.ai:spring-ai-pdf-document-reader")
-    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 }
 
 dependencyManagement {
