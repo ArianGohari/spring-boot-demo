@@ -43,3 +43,4 @@ out/
 ### General ###
 .env
 *.db
+*.png
