@@ -11,7 +11,7 @@ Welcome to **Chat with Paper**, a demo application built with Spring Boot and Re
 
 ### Lombok
 
-The [Lombok](https://projectlombok.org) library is being used to reduce boilerplate code in Java classes
+The [Lombok](https://projectlombok.org) library is being used to reduce boilerplate code in Java classes.
 
 
 ### Deployment
