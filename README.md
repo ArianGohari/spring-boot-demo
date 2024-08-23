@@ -8,7 +8,11 @@ Welcome to **Chat with Paper**, a demo application built with Spring Boot and Re
 - **PDF Interaction:** Upload papers in PDF format and engage in interactive chats with them
 - **AI-Powered Chat:** The chat functionality is driven by Spring AI and the OpenAI API
 - **API**: Papers and their thumbnsild can be accessed via /api/papers/{paper_id} and /api/papers/{paper_id}/thumbnail respectively
-- **Lombok**: [Lombok](https://projectlombok.org) library is being used to reduce boilerplate code in Java classes
+
+### Lombok
+
+The [Lombok](https://projectlombok.org) library is being used to reduce boilerplate code in Java classes
+
 
 ### Deployment
 
