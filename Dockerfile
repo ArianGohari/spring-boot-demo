@@ -7,4 +7,4 @@ ARG MONGODB_DATABASE=${MONGODB_DATABASE}
 RUN chmod +x ./gradlew
 RUN ./gradlew build
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "build/libs/*.jar"]
+ENTRYPOINT ["sh", "-c", "java -jar $(ls build/libs/*.jar)"]
