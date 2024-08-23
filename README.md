@@ -4,7 +4,7 @@ Welcome to **Chat with Paper**, a demo application built with Spring Boot and Re
 
 ### Key Features
 
-- **Database:** Powered by MongoDB, with Spring Data
+- **Database:** Powered by MongoDB (Atlas), with Spring Data
 - **PDF Interaction:** Upload papers in PDF format and engage in interactive chats with them.
 - **AI-Powered Chat:** The chat functionality is driven by Spring AI and the OpenAI API
 
