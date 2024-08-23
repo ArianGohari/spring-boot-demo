@@ -4,8 +4,8 @@ interface Resource {
     readable: boolean;
     url: unknown;
     contentAsByteArray: Array<number>;
-    filename: string;
     description: string;
+    filename: string;
     uri: unknown;
 }
 export default Resource;

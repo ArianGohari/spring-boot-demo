@@ -2,7 +2,7 @@ import "@vaadin/react-components/css/Lumo.css";
 import "@vaadin/vaadin-lumo-styles/all-imports";
 import "@vaadin/icons";
 
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import {
   AppLayout,
   ConfirmDialog,
@@ -24,6 +24,7 @@ export default function MainLayout() {
   const selectedPaperForDeletion = useSignal<Paper | undefined>(undefined);
   const selectedIndex = useSignal<number | undefined>(undefined);
   const dialogOpened = useSignal(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
 
@@ -79,7 +80,7 @@ export default function MainLayout() {
   // Format paper name, if name is longer than 16 characters, show first 16 characters
   function formatPaperName(paper: Paper) {
     if (paper.name != null && paper.name?.length > 16) {
-      return paper.name?.substring(0, 16) + '...pdf';
+      return paper.name?.substring(0, 16) + '...';
     }
 
     return paper.name;
@@ -105,6 +106,10 @@ export default function MainLayout() {
         papers.value.splice(index, 1);
         paperIds.value.splice(index, 1);
         unselectPaperForDeletion();
+
+        console.log("Paper deleted successfully");
+        navigate("/");
+        console.log("Navigated to /");
       });
     }
   }

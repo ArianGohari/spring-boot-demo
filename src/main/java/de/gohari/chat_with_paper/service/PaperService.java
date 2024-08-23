@@ -6,6 +6,7 @@ import com.vaadin.hilla.Nonnull;
 import de.gohari.chat_with_paper.model.Paper;
 import de.gohari.chat_with_paper.repository.PaperRepository;
 import lombok.RequiredArgsConstructor;
+
 import org.apache.pdfbox.Loader;
 import org.apache.pdfbox.rendering.ImageType;
 import org.apache.pdfbox.rendering.PDFRenderer;
@@ -37,6 +38,8 @@ public class PaperService {
   private final Logger logger = LoggerFactory.getLogger(PaperService.class);
 
   private final PaperRepository paperRepository;
+
+  private final ChatService chatService;
 
   private final TextEmbeddingService textEmbeddingService;
 
@@ -187,6 +190,12 @@ public class PaperService {
    */
   public void delete(String paperId) {
     logger.info("delete | {}", paperId);
+
+    // Delete all chat messages for the paper
+    chatService.clearMessages(paperId);
+
+    // Delete paper
     paperRepository.deleteById(paperId);
+
   }
 }

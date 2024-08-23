@@ -129,10 +129,17 @@ public class ChatService {
   }
 
   /**
-   * Clear all messages
+   * Clear all messages for a paper
+   * 
+   * @param paperId The paper id to clear messages for
    */
-  public void clearMessages() {
+  public void clearMessages(String paperId) {
     logger.info("clearMessages");
-    chatMessageRepository.deleteAll();
+
+    // Load paper from db
+    var paper = paperRepository.findById(paperId).orElseThrow();
+
+    // Delete all messages for the paper
+    chatMessageRepository.deleteByPaper(paper);
   }
 }

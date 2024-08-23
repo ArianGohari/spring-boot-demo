@@ -1,3 +1,5 @@
+import ChatMessage from "Frontend/generated/de/gohari/chat_with_paper/model/ChatMessage";
+import { ChatService } from "Frontend/generated/endpoints";
 import { ReactAdapterElement, RenderHooks } from "Frontend/generated/flow/ReactAdapter";
 import { ReactElement } from "react";
 import {
@@ -8,8 +10,6 @@ import {
   MessageList, Tooltip,
   VerticalLayout
 } from "@vaadin/react-components";
-import ChatMessage from "Frontend/generated/de/gohari/chat_with_paper/model/ChatMessage";
-import { ChatService } from "Frontend/generated/endpoints";
 
 class ChatView extends ReactAdapterElement {
   protected render(hooks: RenderHooks): ReactElement | null {
@@ -27,7 +27,7 @@ class ChatView extends ReactAdapterElement {
     }
 
     function clearMessages() {
-      ChatService.clearMessages().then(_ => setMessages([]));
+      ChatService.clearMessages(paperId).then(_ => setMessages([]));
     }
 
     return (
