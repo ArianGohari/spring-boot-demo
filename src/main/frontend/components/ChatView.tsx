@@ -31,7 +31,7 @@ class ChatView extends ReactAdapterElement {
     }
 
     return (
-      <VerticalLayout style={{ width: "32rem", height: "100%", overflow: "hidden", paddingBottom: "1rem" }}>
+      <VerticalLayout style={{ width: "28rem", height: "100%", overflow: "hidden", paddingBottom: "1rem" }}>
         <div style={{ flex: "1", overflow: "auto", display: "flex", flexDirection: "column-reverse" }}>
           <MessageList items={messages.map(message => {
             return {

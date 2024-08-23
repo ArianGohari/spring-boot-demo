@@ -123,7 +123,7 @@ export default function MainLayout() {
   return (
     <AppLayout style={appLayoutStyle}>
       <h1 slot="navbar" style={h1Style}>
-        Spring Boot - React - MongoDB - Demo App
+        Chat with Paper
       </h1>
       <Tabs slot="drawer" orientation="vertical" selected={selectedIndex.value}
         onSelectedChanged={onSelectedChanged}>
